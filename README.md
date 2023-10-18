@@ -17,8 +17,19 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 # Data
 Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data are obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
 
+Please follow [ContrastiveBLI/get_data.sh](https://github.com/cambridgeltl/ContrastiveBLI/blob/main/get_data.sh) and [ContrastiveBLI/Get_PanLex_Data](https://github.com/cambridgeltl/ContrastiveBLI/tree/main/Get_PanLex_Data) to download BLI data and derive static word embeddings.
 
 # Run the Code
+Prepare BLI Data and Extract In-Context Examples for Few-Shot Prompting (XLING):
+```bash
+python run_extract_vocabularies.py
+python run_extract_bli_data.py
+```
+Prepare BLI Data and Extract In-Context Examples for Few-Shot Prompting (PanLex-BLI):
+```bash
+python run_extract_vocabularies_panlex.py
+python run_extract_bli_data_panlex.py
+```
 
 
 # Citation
