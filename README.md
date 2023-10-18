@@ -17,7 +17,7 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 # Run the Code
 
 
-## Citation:
+# Citation:
 Please cite our paper if you find **Prompt4BLI** useful.
 ```bibtex
 @inproceedings{li-etal-2023-on,
