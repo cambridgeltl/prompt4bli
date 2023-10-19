@@ -21,8 +21,8 @@ def my_collate_fn(batch):
     else: # XGLM, mGPT, LLaMA 
         input_encs = tokenizer(labels_txt, padding=True, return_tensors="pt")
 
-    labels = copy.deepcopy(input_encs.input_ids)
-    input_encs['labels'] = labels
+        labels = copy.deepcopy(input_encs.input_ids)
+        input_encs['labels'] = labels
 
     return  input_encs
 
