@@ -35,7 +35,10 @@ Prepare BLI Data and Extract In-Context Examples for Few-Shot Prompting (PanLex-
 python run_extract_vocabularies_panlex.py
 python run_extract_bli_data_panlex.py
 ```
-
+Run BLI Evaluation (define seed dictionary size, n_shot, LLM dir, and language pairs to evaluate manually in run_bli.py):
+```bash
+python run_bli.py
+```
 
 # Citation
 Please cite our paper if you find **Prompt4BLI** useful.
