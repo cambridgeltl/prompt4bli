@@ -15,9 +15,14 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 - Transformers>=4.28.1
 
 # Data
-Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data are obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
+Following our previous work [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data are obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
 
-Please follow [ContrastiveBLI/get_data.sh](https://github.com/cambridgeltl/ContrastiveBLI/blob/main/get_data.sh) and [ContrastiveBLI/Get_PanLex_Data](https://github.com/cambridgeltl/ContrastiveBLI/tree/main/Get_PanLex_Data) to download BLI data and derive static word embeddings.
+Get XLING data:
+```bash
+sh get_xling_data.sh
+```
+
+For PanLex-BLI, the code for deriving the monolingual word embeddings is available at [./get_panlex_data](./).
 
 # Run the Code
 Prepare BLI Data and Extract In-Context Examples for Few-Shot Prompting (XLING):
