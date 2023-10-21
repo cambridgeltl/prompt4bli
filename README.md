@@ -22,7 +22,7 @@ Get XLING data:
 sh get_xling_data.sh
 ```
 
-For PanLex-BLI, the code for deriving the monolingual word embeddings is available at [./get_panlex_data](./get_panlex_data).
+For PanLex-BLI, please see [./get_panlex_data](./get_panlex_data), where we provide the code for deriving the monolingual word embeddings.
 
 # Run the Code
 Prepare BLI Data and Extract In-Context Examples for Few-Shot Prompting (XLING):
