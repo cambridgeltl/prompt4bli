@@ -14,6 +14,29 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 - PyTorch>=1.10.1
 - Transformers>=4.28.1
 
+# LLMs Used in Our Work
+
+| LLM | (Hugging Face) Model ID |
+| -------- | -------- |
+| mT5-small | "google/mt5-small" |
+| mT5-base | "google/mt5-base" |
+| mT5-large | "google/mt5-large" |
+| mT5-xl | "google/mt5-xl" |
+| mT5-xxl | "google/mt5-xxl" |
+| mT0-small | "bigscience/mt0-small" |
+| mT0-base | "bigscience/mt0-base" |
+| mT0-large | "bigscience/mt0-large" |
+| mT0-xl | "bigscience/mt0-xl" |
+| mT0-xxl | "bigscience/mt0-xxl" |
+| XGLM-564M | "facebook/xglm-564M" |
+| XGLM-1.7B | "facebook/xglm-1.7B" |
+| XGLM-2.9B | "facebook/xglm-2.9B" |
+| XGLM-4.5B | "facebook/xglm-4.5B" |
+| XGLM-7.5B | "facebook/xglm-7.5B" |
+| mGPT | "sberbank-ai/mGPT" |
+| LLaMA-7B | "huggyllama/llama-7b" |
+| LLaMA-13B | "huggyllama/llama-13b" |
+
 # Data
 Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data is obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
 
