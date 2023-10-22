@@ -40,7 +40,7 @@ lang_pairs = [('de', 'fi'),
 # ('hu','ca'),
 # ('bg','hu')]
 
-Model = "huggyllama/llama-13b"  # a list of model ids for off-the-shelf LLMs available in our paper's Table 7; for models after BLI-oriented fine-tuning, use the local dir of the model. 
+Model = "huggyllama/llama-13b"  # a list of model ids for off-the-shelf LLMs available in README and in our paper's Table 7; for models after BLI-oriented fine-tuning, use the local dir of the model. 
 size_train = "5k" # or "1k"
 n_shot = 5
 
