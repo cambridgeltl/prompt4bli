@@ -7,7 +7,7 @@ Yaoyiran Li, Anna Korhonen, and Ivan Vulić. 2023. *On Bilingual Lexicon Inducti
 
 Traditional methods rely on learning parameterized CLWE mappings or cross-lingual word pair scoring functions and usually tackle BLI in three setups: (1) **Supervised**, 5K seed translation pairs; (2) **Semi-Supervised**, 1K seed translation pairs; (3) **Unsupervised**, 0 seed translation pairs. (cf. our previous work [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI) and [BLICEr](https://github.com/cambridgeltl/BLICEr)). Different from traditional methods, **Prompt4BLI** only makes use of off-the-shelf LLMs, **not** requiring LLM fine-tuning nor updating any learnable parameters. Our work considers the following prompting setups:
 
-- **Few-Shot Prompting**: We propose to retrieve a subset of the seed translation pairs (nearest neighbour retrieval) as in-context examples for prompting. Corresponds to the traditional Semi-Supervised and Semi-Supervised BLI setups when the seed bilingual dictionary size is 5K and 1K respectively.
+- **Few-Shot Prompting**: We propose to retrieve a subset of the seed translation pairs (nearest neighbour retrieval) as in-context examples for prompting. Corresponds to the traditional Supervised and Semi-Supervised BLI setups where the seed bilingual dictionary size is 5K and 1K respectively.
 - **Zero-Shot Prompting**: No in-context examples are used. Corresponds to the traditional Unsupervised BLI setup.
 
 # Dependencies
@@ -15,7 +15,7 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 - Transformers>=4.28.1
 
 # Data
-Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data are obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
+Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data is obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
 
 Get XLING data:
 ```bash
