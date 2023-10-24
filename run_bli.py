@@ -40,9 +40,9 @@ lang_pairs = [('de', 'fi'),
 # ('hu','ca'),
 # ('bg','hu')]
 
-Model = "huggyllama/llama-13b"  # a list of model ids for off-the-shelf LLMs available in README and in our paper's Table 7; for models after BLI-oriented fine-tuning, use the local dir of the model. 
-size_train = "5k" # or "1k"
-n_shot = 5
+Model = "huggyllama/llama-13b"  # A list of model IDs for off-the-shelf LLMs is available in README and also in our paper's Table 7; for models after BLI-oriented fine-tuning, use the local dir of these models. 
+size_train = "5k"  # Seed dictionary size, "5k" or "1k". When n_shot=0, the apply_template function in src/util.py will not use any in-context examples, so size_train can be either "5k" or "1k" in this case.
+n_shot = 5  # Number of in-context examples. Zero-shot prompting (also known as unsupervised BLI in previous BLI work): n_shot=0.
 
 for (lang1, lang2) in lang_pairs:
     print(lang1, lang2)
