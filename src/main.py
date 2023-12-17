@@ -5,7 +5,6 @@ import os
 import numpy as np
 from util import *
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
-# import os
 # os.environ['TRANSFORMERS_CACHE'] = '/media/cache/'
 from tqdm import tqdm
 from model_wrapper import Model_Wrapper
