@@ -33,7 +33,7 @@ for (lang1, lang2) in lang_pairs:
     print(lang1, lang2)
     sys.stdout.flush()
 
-    size_train = "5k" # or "1k"
+    size_train = "5k"
     ROOT_EMB_SRC = "/media/data/WES/fasttext.wiki.{}.300.vocab_200K.vec".format(lang1)
     ROOT_EMB_TRG = "/media/data/WES/fasttext.wiki.{}.300.vocab_200K.vec".format(lang2)
     ROOT_TEST_DICT = "/media/data/xling-eval/bli_datasets/{}-{}/yacle.test.freq.2k.{}-{}.tsv".format(lang1, lang2, lang1, lang2)
@@ -47,7 +47,7 @@ for (lang1, lang2) in lang_pairs:
     print(lang1, lang2)
     sys.stdout.flush()
 
-    size_train = "1k" # or "1k"
+    size_train = "1k"
     ROOT_EMB_SRC = "/media/data/WES/fasttext.wiki.{}.300.vocab_200K.vec".format(lang1)
     ROOT_EMB_TRG = "/media/data/WES/fasttext.wiki.{}.300.vocab_200K.vec".format(lang2)
     ROOT_TEST_DICT = "/media/data/xling-eval/bli_datasets/{}-{}/yacle.test.freq.2k.{}-{}.tsv".format(lang1, lang2, lang1, lang2)
