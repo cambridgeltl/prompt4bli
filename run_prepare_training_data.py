@@ -4,7 +4,7 @@ import sys
 
 n_shot = 5
 
-for Model in ["huggyllama/llama-13b","huggyllama/llama-7b","google/mt5-large","google/mt5-base", "facebook/xglm-1.7B", "facebook/xglm-564M"]:
+for Model in ["google/mt5-large", "google/mt5-base", "facebook/xglm-1.7B", "facebook/xglm-564M"]:
     for size_train in ["5k","1k"]:
 
         # --best_template
