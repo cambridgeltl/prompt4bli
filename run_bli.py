@@ -49,5 +49,5 @@ for (lang1, lang2) in lang_pairs:
     sys.stdout.flush()
     # --best_template
     DATA_ROOT = "/media/data/T2TData/"
-    SAVE_ROOT = "/media/data/T2TModel/" # save aligend WEs 
+    SAVE_ROOT = "/media/data/T2TModel/" # save dir
     os.system('python ./src/main.py --l1 {} --l2 {} --model_name {} --train_size {} --n_shot {} --data_dir {} --save_dir {} --best_template'.format(lang1, lang2, Model, size_train, n_shot, DATA_ROOT, SAVE_ROOT))
