@@ -9,5 +9,5 @@ for Model in ["huggyllama/llama-13b","huggyllama/llama-7b","google/mt5-large","g
 
         # --best_template
         DATA_ROOT = "/media/data/T2TData/"
-        SAVE_ROOT = "/media/data/T2TDataTrainDev/" # save aligend WEs 
+        SAVE_ROOT = "/media/data/T2TDataTrainDev/" # save dir
         os.system('python ./src/prepare_training_data.py --model_name {} --train_size {} --n_shot {} --data_dir {} --save_dir {} --best_template'.format(Model, size_train, n_shot, DATA_ROOT, SAVE_ROOT))
