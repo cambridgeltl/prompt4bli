@@ -12,7 +12,7 @@ for (lang1, lang2) in lang_pairs:
     print(lang1, lang2)
     sys.stdout.flush()
 
-    size_train = "1k" # or "1k"
+    size_train = "1k"
     ROOT_EMB_SRC = "/media/data/WESPLX/fasttext.cc.{}.300.vocab_200K.vec".format(lang1)
     ROOT_EMB_TRG = "/media/data/WESPLX/fasttext.cc.{}.300.vocab_200K.vec".format(lang2)
     ROOT_TRAIN_DICT = "/media/data/panlex-bli/lexicons/all/{}-{}/{}-{}.train.1000.cc.trans".format(lang1, lang2, lang1, lang2)
