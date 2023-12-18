@@ -62,6 +62,7 @@ python run_extract_bli_data_panlex.py
 
 (Optional) Run BLI-Oriented LLM Fine-Tuning (define LLM dirs, learning rate, batch size, and random seed in run_training.py):
 ```bash
+python run_prepare_training_data.py
 python run_training.py
 ```
 
