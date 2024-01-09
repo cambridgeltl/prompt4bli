@@ -173,7 +173,7 @@ if __name__ == '__main__':
 
     ### Load Model
     model_wrapper = Model_Wrapper()
-    model, tokenizer = model_wrapper.load_bert(
+    model, tokenizer = model_wrapper.load_model(
         path=args.model_name,
         max_length=args.max_length
     )
