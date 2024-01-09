@@ -20,7 +20,7 @@ class Model_Wrapper(object):
         self.tokenizer.save_pretrained(output_dir)
 
 
-    def load_bert(self, path, max_length):
+    def load_model(self, path, max_length):
 
         if "mt5" in path:
             self.tokenizer = T5Tokenizer.from_pretrained(path)
