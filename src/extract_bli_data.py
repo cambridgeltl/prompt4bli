@@ -50,8 +50,8 @@ if __name__ == '__main__':
                     help="train dict size")
     parser.add_argument("--emb_src_dir", type=str, default="./",
                     help="emb_src_dir")
-    parser.add_argument("--tgt_src_dir", type=str, default="./",
-                    help="tgt_src_dir")
+    parser.add_argument("--emb_tgt_dir", type=str, default="./",
+                    help="emb_tgt_dir")
     parser.add_argument("--train_dict_dir", type=str, default="./",
                     help="train_dict_dir")
     parser.add_argument("--test_dict_dir", type=str, default="./",
@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
 ####Defining Directories
     DIR_EMB_SRC = args.emb_src_dir
-    DIR_EMB_TRG = args.tgt_src_dir
+    DIR_EMB_TRG = args.emb_tgt_dir
     DIR_TEST_DICT = args.test_dict_dir
     DIR_TRAIN_DICT = args.train_dict_dir
 
