@@ -1,3 +1,4 @@
+import time
 import codecs
 import numpy as np
 from itertools import chain
