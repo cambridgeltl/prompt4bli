@@ -40,7 +40,7 @@ for (lang1, lang2) in lang_pairs:
     ROOT_TRAIN_DICT = "/media/data/xling-eval/bli_datasets/{}-{}/yacle.train.freq.{}.{}-{}.tsv".format(lang1, lang2, size_train , lang1, lang2)
     SAVE_ROOT = "/media/data/T2TData/" # save dir
 
-    os.system('python ./src/extract_bli_data.py --l1 {} --l2 {} --train_size {} --emb_src_dir {} --tgt_src_dir {} --train_dict_dir {} --test_dict_dir {} --save_dir {}'.format(lang1, lang2, size_train, ROOT_EMB_SRC, ROOT_EMB_TRG, ROOT_TRAIN_DICT, ROOT_TEST_DICT, SAVE_ROOT))
+    os.system('python ./src/extract_bli_data.py --l1 {} --l2 {} --train_size {} --emb_src_dir {} --emb_tgt_dir {} --train_dict_dir {} --test_dict_dir {} --save_dir {}'.format(lang1, lang2, size_train, ROOT_EMB_SRC, ROOT_EMB_TRG, ROOT_TRAIN_DICT, ROOT_TEST_DICT, SAVE_ROOT))
 
 
 for (lang1, lang2) in lang_pairs:
