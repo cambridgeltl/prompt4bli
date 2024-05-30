@@ -40,8 +40,10 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 | mGPT | "sberbank-ai/mGPT" |
 | LLaMA-7B | "huggyllama/llama-7b" |
 | LLaMA-13B | "huggyllama/llama-13b" |
+| LLaMA2-7B | "meta-llama/Llama-2-7b-hf" |
+| LLaMA2-13B | "meta-llama/Llama-2-13b-hf" |
 
-Our follow-up work [SAIL](https://github.com/cambridgeltl/sail-bli) (ACL 2024) also covers LLaMA2-7B, LLaMA2-13B, GPT-3.5, and GPT-4. Please refer to [SAIL](https://github.com/cambridgeltl/sail-bli) for the zero-shot templates of the four LLMs and the few-shot templates of the two LLaMA2 models. 
+LLaMA2-7B and LLaMA2-13B models are investigated in our follow-up work [SAIL](https://github.com/cambridgeltl/sail-bli) (ACL 2024), which we also integrate into the current code repo. [SAIL](https://github.com/cambridgeltl/sail-bli) also conducts zero-shot prompting with GPT-3.5, and GPT-4. Please refer to [SAIL](https://github.com/cambridgeltl/sail-bli) for the details. 
 
 # Data
 Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data is obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
