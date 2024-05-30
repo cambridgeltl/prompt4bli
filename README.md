@@ -88,6 +88,7 @@ Please cite our paper if you find **Prompt4BLI** useful.
 }
 ```
 Follow-up Work (Code available at [SAIL](https://github.com/cambridgeltl/sail-bli)): 
+```bibtex
 @inproceedings{li-etal-2024-self,
     title     = {Self-Augmented In-Context Learning for Unsupervised Word Translation},
     author    = {Li, Yaoyiran and Korhonen, Anna and Vuli{\'c}, Ivan},
