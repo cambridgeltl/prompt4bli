@@ -30,7 +30,7 @@ def inference(model, tokenizer, prompt_dict, args, target_voc, max_len=5, num_se
     if span_mask or ("t5" in args.model_name) or ("t0" in args.model_name):
         max_len = 5
 
-    if (("xglm" in args.model_name) or ("GPT" in args.model_name) or ("llama" in args.model_name)) and (args.batch_eval == 1):
+    if (("xglm" in args.model_name) or ("GPT" in args.model_name) or ("llama" in args.model_name) or ("Llama" in args.model_name)) and (args.batch_eval == 1):
         dynamic_max_len = True
     else:
         dynamic_max_len = False
@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
     del model_string
 
-    if ("xglm" in args.model_name) or ("GPT" in args.model_name) or ("llama" in args.model_name):
+    if ("xglm" in args.model_name) or ("GPT" in args.model_name) or ("llama" in args.model_name) or ("Llama" in args.model_name):
         args.batch_eval = 1
     elif "xl" in args.model_name:
         args.batch_eval = 8
