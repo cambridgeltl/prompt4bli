@@ -45,7 +45,7 @@ class Model_Wrapper(object):
             self.tokenizer = GPT2Tokenizer.from_pretrained(path, padding_side='left')
             self.model = GPT2LMHeadModel.from_pretrained(path)
             self.tokenizer.pad_token_id = self.tokenizer.eos_token_id #1
-        elif "llama" in path:
+        elif "llama" in path or "Llama-2" in path:
             self.tokenizer = LlamaTokenizer.from_pretrained(path, padding_side='left')
             self.model = LlamaForCausalLM.from_pretrained(path)
             self.tokenizer.pad_token_id = self.tokenizer.eos_token_id #1
