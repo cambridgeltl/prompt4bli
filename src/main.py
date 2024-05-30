@@ -43,7 +43,7 @@ def inference(model, tokenizer, prompt_dict, args, target_voc, max_len=5, num_se
         if dynamic_max_len: 
             max_len = 5 + input_encs.input_ids.size(1) 
         input_encs_cuda = {k:v.cuda() for k,v in input_encs.items()}     
-        outputs = model.generate(**input_encs_cuda,num_beams=num_seq, num_return_sequences=num_seq,max_length=max_len)
+        outputs = model.generate(**input_encs_cuda,num_beams=num_seq, num_return_sequences=num_seq,max_length=max_len,do_sample=False)
         output_sents = [tokenizer.decode(o, skip_special_tokens=True) for o in outputs]
         output_grouped = [output_sents[i*num_seq:(i+1)*num_seq] for i in range((len(output_sents)//num_seq))]  
         predictions.extend(output_grouped)
