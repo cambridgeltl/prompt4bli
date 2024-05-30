@@ -10,6 +10,10 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 - **Few-Shot Prompting**: We propose to retrieve a subset of the seed translation pairs (nearest neighbour retrieval) as in-context examples for prompting. Corresponds to the traditional Supervised and Semi-Supervised BLI setups where the seed bilingual dictionary size is 5K and 1K respectively.
 - **Zero-Shot Prompting**: No in-context examples are used. Corresponds to the traditional Unsupervised BLI setup.
 
+## Follow-up Work:
+
+**Update**: please see our follow-up work [SAIL](https://github.com/cambridgeltl/sail-bli) (ACL 2024) where we further improve **unsupervised** BLI by **(1)** inferring a high-confidence word translation dictionary with zero-shot prompting, **(2)** then optionally refining the high-confidence dictionary iteratively with few-shot prompting where the in-context examples are from the high-confidence dictionary in the previous iteration, and **(3)** finally conducting evaluation on the BLI test set with few-shot prompting also deriving in-context samples from the latest high-confidence dictionary. The whole process does not leverage any ground-truth word translation pairs for training/few-shot learning and improves the BLI scores by typically 10 ~ 15 P@1 points comparing to zero-shot prompting.
+
 # Dependencies
 - PyTorch>=1.10.1
 - Transformers>=4.28.1
