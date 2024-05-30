@@ -12,7 +12,7 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 
 ## Follow-up Work:
 
-**Update**: please see our follow-up work [SAIL](https://github.com/cambridgeltl/sail-bli) (ACL 2024) where we further improve **unsupervised** BLI by **(1)** inferring a high-confidence word translation dictionary with zero-shot prompting, **(2)** then optionally refining the high-confidence dictionary iteratively with few-shot prompting where the in-context examples are from the high-confidence dictionary in the previous iteration, and **(3)** finally conducting evaluation on the BLI test set with few-shot prompting also deriving in-context samples from the latest high-confidence dictionary. The whole process does not leverage any ground-truth word translation pairs for training/few-shot learning and improves the BLI scores by typically 10 ~ 15 P@1 points comparing to zero-shot prompting.
+**Update**: please see our follow-up work [SAIL](https://github.com/cambridgeltl/sail-bli) (ACL 2024) where we further improve **unsupervised** BLI by **(1)** inferring a high-confidence word translation dictionary with zero-shot prompting, **(2)** then optionally refining the high-confidence dictionary iteratively with few-shot prompting where the in-context examples are from the high-confidence dictionary in the previous iteration, and **(3)** finally conducting evaluation on the BLI test set with few-shot prompting also deriving in-context samples from the latest high-confidence dictionary. The whole process does not leverage any ground-truth word translation pairs for training/few-shot learning and improves the BLI scores by typically 10 ~ 15 P@1 points comparing to zero-shot prompting. 
 
 # Dependencies
 - PyTorch>=1.10.1
@@ -40,6 +40,8 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 | mGPT | "sberbank-ai/mGPT" |
 | LLaMA-7B | "huggyllama/llama-7b" |
 | LLaMA-13B | "huggyllama/llama-13b" |
+
+Our follow-up work [SAIL](https://github.com/cambridgeltl/sail-bli) (ACL 2024) also covers LLaMA2-7B, LLaMA2-13B, GPT-3.5, and GPT-4. Please refer to [SAIL](https://github.com/cambridgeltl/sail-bli) for the zero-shot templates of the four LLMs and the few-shot templates of the two LLaMA2 models. 
 
 # Data
 Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data is obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
@@ -83,5 +85,13 @@ Please cite our paper if you find **Prompt4BLI** useful.
     author    = {Li, Yaoyiran and Korhonen, Anna and Vuli{\'c}, Ivan},
     booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},    
     year      = {2023}
+}
+```
+Follow-up Work (Code available at [SAIL](https://github.com/cambridgeltl/sail-bli)): 
+@inproceedings{li-etal-2024-self,
+    title     = {Self-Augmented In-Context Learning for Unsupervised Word Translation},
+    author    = {Li, Yaoyiran and Korhonen, Anna and Vuli{\'c}, Ivan},
+    booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics},    
+    year      = {2024}
 }
 ```
