@@ -216,6 +216,10 @@ def get_best_template(args, src, tgt, tgt_code):
             best_template = [f"The {src} word {{}} in {tgt} is:"]
         elif "llama-13b" in args.model_name:  
             best_template = [f"Translate from {src} to {tgt}: {{}}=>"]
+        elif "Llama-2-7b" in args.model_name:
+            best_template = [f"The {src} word {{}} in {tgt} is:"]
+        elif "Llama-2-13b" in args.model_name:
+            best_template = [f"The {src} word {{}} in {tgt} is:"]
         else:
             print("UNKNOWN MODEL, PLEASE SEARCH THROUGH OUR TEMPLATE POOL FIRST VIA get_templates()")
             exit()
@@ -256,6 +260,10 @@ def get_best_template(args, src, tgt, tgt_code):
         elif "llama-7b" in args.model_name:  
             best_template = [f"The {src} word '{{}}' in {tgt} is {{}}. "*n_shot + f"The {src} word '{{}}' in {tgt} is"]
         elif "llama-13b" in args.model_name:  
+            best_template = [f"The {src} word '{{}}' in {tgt} is {{}}. "*n_shot + f"The {src} word '{{}}' in {tgt} is"]
+        elif "Llama-2-7b" in args.model_name:
+            best_template = [f"The {src} word {{}} in {tgt} is {{}}. "*n_shot + f"The {src} word {{}} in {tgt} is"]
+        elif "Llama-2-13b" in args.model_name:
             best_template = [f"The {src} word '{{}}' in {tgt} is {{}}. "*n_shot + f"The {src} word '{{}}' in {tgt} is"]
         else:
             print("UNKNOWN MODEL, PLEASE SEARCH THROUGH OUR TEMPLATE POOL FIRST VIA get_templates()")
