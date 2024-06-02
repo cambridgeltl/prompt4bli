@@ -48,6 +48,7 @@ class Model_Wrapper(object):
         elif "llama" in path or "Llama-2" in path:
             self.tokenizer = LlamaTokenizer.from_pretrained(path, padding_side='left')
             self.model = LlamaForCausalLM.from_pretrained(path)
+            # self.model = LlamaForCausalLM.from_pretrained(path,torch_dtype=torch.float16) # fp16
             self.tokenizer.pad_token_id = self.tokenizer.eos_token_id #1
         else:
             print("WARNING: UNKNOWN MODEL")
