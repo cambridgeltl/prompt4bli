@@ -10,7 +10,7 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 - **Few-Shot Prompting**: We propose to retrieve a subset of the seed translation pairs (nearest neighbour retrieval) as in-context examples for prompting. Corresponds to the traditional Supervised and Semi-Supervised BLI setups where the seed bilingual dictionary size is 5K and 1K respectively.
 - **Zero-Shot Prompting**: No in-context examples are used. Corresponds to the traditional Unsupervised BLI setup.
 
-(Note: To investigate **unsupervised** BLI, we recommend to used pretrained LLMs rather than instruction-tuned ones. It is because the procedure of instruction-tuning of LLMs usually covers large-scale parallel data for machine translation. So using instruction-tuned LLMs such as ChatGPT models, even with zero-shot prompting, can lead to unfair comparisons with other unsupervised BLI approaches.)
+(Note: To investigate **unsupervised** BLI, we recommend to use pretrained LLMs rather than instruction-tuned ones. It is because the procedure of instruction-tuning of LLMs usually covers large-scale parallel data for machine translation. So using instruction-tuned LLMs such as ChatGPT models, even with zero-shot prompting, can lead to unfair comparisons with other unsupervised BLI approaches.)
 
 ## Follow-up Work:
 
