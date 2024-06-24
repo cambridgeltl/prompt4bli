@@ -44,8 +44,9 @@ Traditional methods rely on learning parameterized CLWE mappings or cross-lingua
 | LLaMA-13B | "huggyllama/llama-13b" |
 | LLaMA2-7B | "meta-llama/Llama-2-7b-hf" |
 | LLaMA2-13B | "meta-llama/Llama-2-13b-hf" |
+| LLaMA3-8B | "meta-llama/Meta-Llama-3-8B" |
 
-LLaMA2-7B and LLaMA2-13B models are investigated in our follow-up work [SAIL](https://github.com/cambridgeltl/sail-bli) (ACL 2024), and we also integrate the LLaMA2 models into the current code repo. [SAIL](https://github.com/cambridgeltl/sail-bli) also conducts zero-shot prompting with GPT-3.5, and GPT-4. Please refer to [SAIL](https://github.com/cambridgeltl/sail-bli) for the details. 
+In addition to the LLMs adopted in our original paper, we additionally integrate LLaMA2-7B, LLaMA2-13B, and LLaMA3-8B into the current code repo. LLaMA2-7B and LLaMA2-13B models are investigated and the results are reported in our follow-up work [SAIL](https://github.com/cambridgeltl/sail-bli) (ACL 2024). [SAIL](https://github.com/cambridgeltl/sail-bli) also conducts zero-shot prompting with GPT-3.5 and GPT-4. Please refer to [SAIL](https://github.com/cambridgeltl/sail-bli) for the details. 
 
 # Data
 Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) and [BLICEr](https://github.com/cambridgeltl/BLICEr), our data is obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total).
