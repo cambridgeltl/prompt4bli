@@ -265,6 +265,8 @@ def get_best_template(args, src, tgt, tgt_code):
             best_template = [f"The {src} word {{}} in {tgt} is {{}}. "*n_shot + f"The {src} word {{}} in {tgt} is"]
         elif "Llama-2-13b" in args.model_name:
             best_template = [f"The {src} word '{{}}' in {tgt} is {{}}. "*n_shot + f"The {src} word '{{}}' in {tgt} is"]
+        elif "Llama-3-8B" in args.model_name:
+            best_template = [f"The {src} word {{}} in {tgt} is {{}}. "*n_shot + f"The {src} word {{}} in {tgt} is"]
         else:
             print("UNKNOWN MODEL, PLEASE SEARCH THROUGH OUR TEMPLATE POOL FIRST VIA get_templates()")
             exit()
