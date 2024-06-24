@@ -5,7 +5,8 @@ from transformers import (
     T5ForConditionalGeneration, AutoModelForSeq2SeqLM,
     XGLMTokenizer, XGLMForCausalLM,
     GPT2LMHeadModel, GPT2Tokenizer,
-    LlamaForCausalLM, LlamaTokenizer
+    LlamaForCausalLM, LlamaTokenizer,
+    AutoModelForCausalLM
 )
 # import os
 # os.environ['TRANSFORMERS_CACHE'] = '/media/cache/'
@@ -45,6 +46,10 @@ class Model_Wrapper(object):
             self.tokenizer = GPT2Tokenizer.from_pretrained(path, padding_side='left')
             self.model = GPT2LMHeadModel.from_pretrained(path)
             self.tokenizer.pad_token_id = self.tokenizer.eos_token_id #1
+        elif 'Llama-3' in path:
+            self.tokenizer = AutoTokenizer.from_pretrained(path, padding_side='left')
+            self.model = AutoModelForCausalLM.from_pretrained(path,torch_dtype=torch.float16)
+            self.tokenizer.pad_token_id = self.tokenizer.eos_token_id #1        
         elif "llama" in path or "Llama-2" in path:
             self.tokenizer = LlamaTokenizer.from_pretrained(path, padding_side='left')
             self.model = LlamaForCausalLM.from_pretrained(path)
